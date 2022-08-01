@@ -19,7 +19,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main>
+      <main className="box">
         <div>
           <h2>Resize Example: fill, g_auto</h2>
           <ResizeExample />

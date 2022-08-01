@@ -24,3 +24,9 @@ a {
     background: black;
   }
 }
+
+.box {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
