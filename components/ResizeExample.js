@@ -4,7 +4,7 @@ import { CloudConfig } from '@cloudinary/url-gen';
 import Image from 'next/image';
 
 // Import required actions.
-import { fill } from '@cloudinary/url-gen/actions/resize';
+import { fit } from '@cloudinary/url-gen/actions/resize';
 
 function ResizeExample() {
   // Set the Cloud configuration and URL configuration
@@ -15,7 +15,7 @@ function ResizeExample() {
 
   // Perform the transformation.
   cldImg
-    .resize(fill().width(600).height(400).gravity('auto')) // Crop the image
+    .resize(fit().width(600).height(400)) // Crop the image
     .format('png'); // Deliver as PNG. */
 
   // log the transformation
