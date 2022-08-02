@@ -23,7 +23,12 @@ function EffectsExample() {
 
   // log the transformation
   const cldURL = cldImg.toURL();
-  const transform = cldURL.split('/')[6];
+  const transform =
+    cldURL.split('/')[6] +
+    '/' +
+    cldURL.split('/')[7] +
+    '/' +
+    cldURL.split('/')[8];
 
   console.log('effects-sepia and rounded corders:', cldURL);
   return (
