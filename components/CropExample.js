@@ -7,7 +7,7 @@ import { focusOn } from '@cloudinary/url-gen/qualifiers/gravity';
 import { FocusOn } from '@cloudinary/url-gen/qualifiers/focusOn';
 import Image from 'next/image';
 
-function ResizeExample() {
+function CropExample() {
 
   // Set the Cloud configuration and URL configuration
   const cloudConfig = new CloudConfig({ cloudName: 'cloudinary-training' });
@@ -33,4 +33,4 @@ function ResizeExample() {
   );
 }
 
-export default ResizeExample;
+export default CropExample;

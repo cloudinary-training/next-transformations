@@ -6,7 +6,8 @@ import ResizeExample from '../components/ResizeExample';
 import CropExample from '../components/CropExample';
 import OptimizationImageExample from '../components/OptimizationImageExample';
 import OptimizationVideoExample from '../components/OptimizationVideoExample';
-
+import EffectsExample from '../components/EffectsExample';
+import ImageOverlayExample from '../components/ImageOverlayExample';
 import VideoOverlayExample from '../components/VideoOverlayExample';
 import DocsImage from '../components/DocsImage';
 
@@ -19,7 +20,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className="box">
+      <main className='box'>
         <div>
           <h2>Resize Example: fill, g_auto</h2>
           <ResizeExample />
@@ -36,18 +37,22 @@ export default function Home() {
           <h2>Optimization Video: f_auto, q_auto</h2>
           <OptimizationVideoExample />
         </div>
-        {/*<div> 
-        <h2>Effects: sepia with rounded corners</h2>
-        <EffectsExample />
-      </div>*/}
-      <div> 
-        <h2>Overlay: Video</h2>
-        <VideoOverlayExample />
-      </div>
-      <div>
-        <h2>Image From Documentation Example</h2>
-        <DocsImage />
-      </div> 
+        <div>
+          <h2>Effects: sepia with rounded corners</h2>
+          <EffectsExample />
+        </div>
+        <div>
+          <h2>Overlay: Image with Text</h2>
+          <ImageOverlayExample />
+        </div>
+        <div>
+          <h2>Overlay: Video with Image</h2>
+          <VideoOverlayExample />
+        </div>
+        <div>
+          <h2>Image From Documentation Example</h2>
+          <DocsImage />
+        </div>
       </main>
       <footer className={styles.footer}>
         <a
