@@ -51,11 +51,12 @@ function VideoOverlayExample() {
     cldURL.split('/')[11];
   console.log('video overlay:', cldURL);
 
-  return
-  <div>
-    <h3>{transform}</h3>
-    <AdvancedVideo cldVid={cldVid} controls className='cld-vid' />;
-  </div>;
+  return (
+    <div>
+      <h3>{transform}</h3>
+      <AdvancedVideo cldVid={cldVid} controls className='cld-vid' />
+    </div>
+  );
 }
 
 export default VideoOverlayExample;
