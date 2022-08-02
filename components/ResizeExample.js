@@ -20,16 +20,20 @@ function ResizeExample() {
 
   // log the transformation
   const cldURL = cldImg.toURL();
+  const transform = cldURL.split('/')[6];
   console.log('resize:', cldURL);
 
   return (
-    <Image
-      width='600'
-      height='400'
-      src={cldURL}
-      alt='Resized Image'
-      priority='true'
-    />
+    <div>
+      <h3>{transform}</h3>
+      <Image
+        width='600'
+        height='400'
+        src={cldURL}
+        alt='Resized Image'
+        priority='true'
+      />
+    </div>
   );
 }
 

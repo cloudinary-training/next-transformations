@@ -27,8 +27,15 @@ function OptimizationImageExample() {
   // log the transformation
   const cldURL = cldImg.toURL();
   console.log('image optimization:', cldURL);
-
+  const transform =
+  cldURL.split('/')[6] +
+  '/' +
+  cldURL.split('/')[7] +
+  '/' +
+  cldURL.split('/')[8];
   return (
+    <div>
+    <h3>{transform}</h3>
     <Image
       width='600'
       height='300'
@@ -36,6 +43,7 @@ function OptimizationImageExample() {
       alt='Optimized Image'
       priority='true'
     />
+    </div>
   );
 }
 

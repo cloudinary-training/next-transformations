@@ -8,7 +8,6 @@ import { FocusOn } from '@cloudinary/url-gen/qualifiers/focusOn';
 import Image from 'next/image';
 
 function CropExample() {
-
   // Set the Cloud configuration and URL configuration
   const cloudConfig = new CloudConfig({ cloudName: 'cloudinary-training' });
   const urlConfig = new URLConfig({ secure: true, analytics: false });
@@ -21,15 +20,20 @@ function CropExample() {
 
   // log the transformation
   const cldURL = cldImg.toURL();
+  const transform = cldURL.split('/')[6]
   console.log('crop:', cldURL);
+  
   return (
-    <Image
-      width='400'
-      height='400'
-      src={cldURL}
-      alt='Cropped Image'
-      priority='true'
-    />
+    <div>
+      <h3>{transform}</h3>
+      <Image
+        width='400'
+        height='400'
+        src={cldURL}
+        alt='Cropped Image'
+        priority='true'
+      />
+    </div>
   );
 }
 

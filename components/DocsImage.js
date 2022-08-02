@@ -4,7 +4,6 @@ import { URLConfig } from '@cloudinary/url-gen';
 import { CloudConfig } from '@cloudinary/url-gen';
 import Image from 'next/image';
 
-
 // Import required actions.
 import { thumbnail, scale } from '@cloudinary/url-gen/actions/resize';
 import { byRadius } from '@cloudinary/url-gen/actions/roundCorners';
@@ -12,7 +11,6 @@ import { sepia } from '@cloudinary/url-gen/actions/effect';
 import { source } from '@cloudinary/url-gen/actions/overlay';
 import { opacity, brightness } from '@cloudinary/url-gen/actions/adjust';
 import { byAngle } from '@cloudinary/url-gen/actions/rotate';
-
 
 // Import required qualifiers.
 import { image } from '@cloudinary/url-gen/qualifiers/source';
@@ -22,7 +20,6 @@ import { focusOn } from '@cloudinary/url-gen/qualifiers/gravity';
 import { FocusOn } from '@cloudinary/url-gen/qualifiers/focusOn';
 
 function DocsImage() {
-
   // Set the Cloud configuration and URL configuration
   const cloudConfig = new CloudConfig({ cloudName: 'demo' });
   const urlConfig = new URLConfig({ secure: true, analytics: false });
@@ -54,16 +51,20 @@ function DocsImage() {
 
   // log the transformation
   const cldURL = cldImg.toURL();
-  console.log("docs image:",cldURL);
+  const transform = cldURL.split('/')[6];
+  console.log('docs image:', cldURL);
 
   return (
-    <Image
-      width='350'
-      height='350'
-      src={cldURL}
-      alt='Documentation Image'
-      priority='true'
-    />
+    <div>
+      <h3>{transform}</h3>
+      <Image
+        width='350'
+        height='350'
+        src={cldURL}
+        alt='Documentation Image'
+        priority='true'
+      />
+    </div>
   );
 }
 

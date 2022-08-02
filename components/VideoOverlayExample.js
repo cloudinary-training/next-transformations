@@ -37,9 +37,25 @@ function VideoOverlayExample() {
 
   // log the transformation
   const cldURL = cldVid.toURL();
+  const transform =
+    cldURL.split('/')[6] +
+    '/' +
+    cldURL.split('/')[7] +
+    '/' +
+    cldURL.split('/')[8] +
+    '/' +
+    cldURL.split('/')[9] +
+    '/' +
+    cldURL.split('/')[10] +
+    '/' +
+    cldURL.split('/')[11];
   console.log('video overlay:', cldURL);
 
-  return <AdvancedVideo cldVid={cldVid} controls className='cld-vid' />;
+  return
+  <div>
+    <h3>{transform}</h3>
+    <AdvancedVideo cldVid={cldVid} controls className='cld-vid' />;
+  </div>;
 }
 
 export default VideoOverlayExample;
