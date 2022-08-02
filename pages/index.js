@@ -22,7 +22,7 @@ export default function Home() {
 
       <main className='box'>
         <div>
-          <h2>Resize Example: fill, g_auto</h2>
+          <h2>Resize Example: fit</h2>
           <ResizeExample />
         </div>
         <div>
