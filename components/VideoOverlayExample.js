@@ -24,7 +24,7 @@ function VideoOverlayExample() {
     .resize(scale().width(700)) // scale the image
     .overlay(
       source(
-        image('logo').transformation(
+        image('logo-solid-blue').transformation(
           new Transformation()
             .resize(fit().width(100).height(100))
             .adjust(opacity(60)) // Adjust the opacity of the logo.
