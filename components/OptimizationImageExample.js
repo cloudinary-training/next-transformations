@@ -13,7 +13,7 @@ function OptimizationImageExample() {
   const urlConfig = new URLConfig({ secure: true, analytics: false });
 
   const cldImg = new CloudinaryImage(
-    'images/forest-reflection',
+    'cld-forest-reflection',
     cloudConfig,
     urlConfig
   );

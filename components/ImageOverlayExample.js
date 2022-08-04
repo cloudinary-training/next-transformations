@@ -21,15 +21,11 @@ function ImageOverlayExample() {
   // Perform the transformation.
   cldImg
     .resize(fill().width(600).height(400).gravity('auto')) // Crop the image
-    // .resize(thumbnail().width(400).height(400).gravity(focusOn(FocusOn.face()))) // Crop the image
     .overlay(
       source(
         text('Move!', new TextStyle('Arial', 50).fontWeight('bold')).textColor(
           'black'
         )
-
-        // .transformation(new Transformation()
-        // .rotate(byAngle(20)))
       ).position(
         new Position().gravity(compass('north_east')).offsetX(20).offsetY(10)
       )

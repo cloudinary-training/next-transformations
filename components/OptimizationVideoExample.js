@@ -14,7 +14,7 @@ function OptimizationVideoExample() {
 
   // Perform the transformation.
   cldVid
-    .resize(scale().width(600)) // scale the image
+    .resize(scale().width(600)) // scale the video
     .format('auto') // f_auto */
     .quality('auto'); // q_auto
 

@@ -26,7 +26,7 @@ export default function Home() {
           <ResizeExample />
         </div>
         <div>
-          <h2>Crop Example: thumb, g_face</h2>
+          <h2>Resize with Crop Example: thumb, g_face</h2>
           <CropExample />
         </div>
         <div>
