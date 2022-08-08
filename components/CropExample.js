@@ -5,7 +5,7 @@ import { CloudConfig } from '@cloudinary/url-gen';
 import { thumbnail } from '@cloudinary/url-gen/actions/resize';
 import { focusOn } from '@cloudinary/url-gen/qualifiers/gravity';
 import { FocusOn } from '@cloudinary/url-gen/qualifiers/focusOn';
-import Image from 'next/image';
+import { AdvancedImage } from '@cloudinary/react';
 
 function CropExample() {
   // Set the Cloud configuration and URL configuration
@@ -26,13 +26,14 @@ function CropExample() {
   return (
     <div>
       <h3>{transform}</h3>
-      <Image
+
+      <AdvancedImage
         width='400'
         height='400'
-        src={cldURL}
-        alt='Cropped Image'
-        priority='true'
+        cldImg={cldImg}
+        alt='Documentation Image'
       />
+    
     </div>
   );
 }

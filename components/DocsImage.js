@@ -2,7 +2,7 @@ import { Transformation } from '@cloudinary/url-gen';
 import { CloudinaryImage } from '@cloudinary/url-gen';
 import { URLConfig } from '@cloudinary/url-gen';
 import { CloudConfig } from '@cloudinary/url-gen';
-import Image from 'next/image';
+import { AdvancedImage } from '@cloudinary/react';
 
 // Import required actions.
 import { thumbnail, scale } from '@cloudinary/url-gen/actions/resize';
@@ -57,12 +57,11 @@ function DocsImage() {
   return (
     <div>
       <h3>{transform}</h3>
-      <Image
+      <AdvancedImage
         width='350'
         height='350'
-        src={cldURL}
+        cldImg={cldImg}
         alt='Documentation Image'
-        priority='true'
       />
     </div>
   );

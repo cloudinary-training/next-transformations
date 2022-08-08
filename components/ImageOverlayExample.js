@@ -9,8 +9,7 @@ import { Position } from '@cloudinary/url-gen/qualifiers/position';
 import { compass } from '@cloudinary/url-gen/qualifiers/gravity';
 
 import { fill } from '@cloudinary/url-gen/actions/resize';
-
-import Image from 'next/image';
+import {AdvancedImage} from '@cloudinary/react'
 
 function ImageOverlayExample() {
   // Set the Cloud configuration and URL configuration
@@ -44,13 +43,13 @@ function ImageOverlayExample() {
   return (
     <div>
       <h3>{transform}</h3>
-      <Image
+      <AdvancedImage
         width='600'
         height='400'
-        src={cldURL}
-        alt='Cropped Image'
-        priority='true'
-      />
+        cldImg={cldImg}
+        alt='Image Overlay'
+      /> 
+     
     </div>
   );
 }

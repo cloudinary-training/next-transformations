@@ -1,3 +1,12 @@
+# Build Transformations in React.js
+
+Cloudinary provides the NPM.js package `@cloudnary/url-gen` to generate image and video transformation URLs in JavaScript.
+The images are rendered using the Cloudinary React.js `AdvanceImage` component.
+The videos are rendered using the Cloudinary React.js `AdvancedVideo` component.
+
+
+## Next.js starter
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

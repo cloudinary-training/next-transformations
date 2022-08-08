@@ -1,7 +1,7 @@
 import { CloudinaryImage } from '@cloudinary/url-gen';
 import { URLConfig } from '@cloudinary/url-gen';
 import { CloudConfig } from '@cloudinary/url-gen';
-import Image from 'next/image';
+import { AdvancedImage } from '@cloudinary/react';
 
 // Import required actions.
 import { fill } from '@cloudinary/url-gen/actions/resize';
@@ -34,12 +34,11 @@ function EffectsExample() {
   return (
     <div>
       <h3>{transform}</h3>
-      <Image
+      <AdvancedImage
         width='400'
         height='400'
-        src={cldURL}
+        cldImg={cldImg}
         alt='Effects with Image'
-        priority='true'
       />
     </div>
   );
