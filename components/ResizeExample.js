@@ -14,9 +14,7 @@ function ResizeExample() {
   const cldImg = new CloudinaryImage('cld-sample-3', cloudConfig, urlConfig);
 
   // Perform the transformation.
-  cldImg
-    .resize(fit().width(600).height(400)) // Crop the image
-    .format('png'); // Deliver as PNG. */
+  cldImg.resize(fit().width(600).height(400)) 
 
   // log the transformation
   const cldURL = cldImg.toURL();

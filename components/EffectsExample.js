@@ -17,7 +17,7 @@ function EffectsExample() {
 
   // Perform the transformation.
   cldImg
-    .resize(fill().width(400).height(400))
+    .resize(fill().width(400).height(400).gravity('auto'))
     .effect(sepia()) //also try cartoonify, sepia
     .roundCorners(byRadius(100));
 

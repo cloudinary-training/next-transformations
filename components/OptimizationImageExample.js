@@ -2,6 +2,8 @@ import { CloudinaryImage } from '@cloudinary/url-gen';
 import { URLConfig } from '@cloudinary/url-gen';
 import { CloudConfig } from '@cloudinary/url-gen';
 import { AdvancedImage } from '@cloudinary/react';
+// import { autoGravity} from '@cloudinary/url-gen/qualifiers/gravity';
+
 
 // Import required actions.
 import { fill } from '@cloudinary/url-gen/actions/resize';
@@ -17,11 +19,14 @@ function OptimizationImageExample() {
     urlConfig
   );
 
-  // Perform the transformation.
+  // Perform the transformation
+  // crop fill the bounding box letting Cloudinary determine gravity
   cldImg
-    .resize(fill().width(600).height(300)) // fill the image
-    .format('auto') // f_auto */
-    .quality('auto'); // q_auto
+    // .resize(fill().width(600).height(300).gravity(autoGravity())) // c_fill..g_auto
+    .resize(fill().width(600).height(300).gravity('auto')) // c_fill..g_auto
+
+    .format('auto')    // f_auto 
+    .quality('auto');  // q_auto
 
   // log the transformation
   const cldURL = cldImg.toURL();

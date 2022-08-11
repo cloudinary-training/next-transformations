@@ -13,10 +13,10 @@ function CropExample() {
   const urlConfig = new URLConfig({ secure: true, analytics: false });
   const cldImg = new CloudinaryImage('cld-sample-3', cloudConfig, urlConfig);
 
-  // Perform the transformation.
+  // Perform the transformation
+  // Crop the image
   cldImg
-    .resize(thumbnail().width(400).height(400).gravity(focusOn(FocusOn.face()))) // Crop the image
-    .format('png'); // Deliver as PNG. */
+    .resize(thumbnail().width(400).height(400).gravity(focusOn(FocusOn.face()))) 
 
   // log the transformation
   const cldURL = cldImg.toURL();
